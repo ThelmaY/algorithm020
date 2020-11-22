@@ -34,7 +34,9 @@ Priority Queue: 插入O(1), 取出O(logN)。按照元素的优先级取出。
 # 作业
 
 **1. 用 add first 或 add last 这套新的 API 改写 Deque 的代码**
-```Deque<String> deque = new LinkedList<String>();
+```
+Deque<String> deque = new LinkedList<String>();
+
 deque.addFirst("a");
 deque.addFirst("b");
 deque.addFirst("c");
@@ -43,7 +45,7 @@ String str = deque.peekFirst();
 System.out.println(str);
 System.out.println(deque);
 while (deque.size() > 0) {
-System.out.println(deque.removeFirst());
+  System.out.println(deque.removeFirst());
 }
 System.out.println(deque);
 ```
