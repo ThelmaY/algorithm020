@@ -10,7 +10,7 @@
 	5. 面试前一周恢复性训练
 3. 要去国际站看top3高票回答
 
-编码技巧和Code Style
+## 编码技巧和Code Style
 1. Code Style可以搜 Google Code Style看
 2. 可以去搜索 top tips IDE名称 进行学习
 3. 行头：home，command+left(Mac)
@@ -19,7 +19,8 @@
    光标按单词划分：control+left/right, option+left/right(Mac)
    删除单词：control+backspace, option+delete(Mac)
    选中整行(光标在行头时)：shift+command+right(Mac)
-   
+
+## 之前没学过的数据结构
 跳表(Skip List)：在元素有序的情况下，对原链表增加多级索引。时间复杂度O(logN), 空间复杂度O(n)
 
 Deque(Double-End Queue):两端可以进出的Queue，增删都是O(1)
