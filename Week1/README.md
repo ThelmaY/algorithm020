@@ -1,13 +1,13 @@
-学习笔记
+# 学习笔记
 
-LeetCode的使用方法
+## LeetCode的使用方法
 1. 不要死磕，5分钟想不出来就去看题解。写完自己的AC之后也要去看高质量题解，思考优化方式。
 2. 过遍数，至少5遍。
-	1：读题、思考、想不出来的话学习别人的题解
-	2：立刻自己写，然后优化
-	3：一天后重复
-	4：一周后重复
-	5：面试前一周恢复性训练
+	1. 读题、思考、想不出来的话学习别人的题解
+	2. 立刻自己写，然后优化
+	3. 一天后重复
+	4. 一周后重复
+	5. 面试前一周恢复性训练
 3. 要去国际站看top3高票回答
 
 编码技巧和Code Style
@@ -27,10 +27,12 @@ Deque(Double-End Queue):两端可以进出的Queue，增删都是O(1)
 Priority Queue: 插入O(1), 取出O(logN)。按照元素的优先级取出。
 
 
-作业
+***
 
-1. 用 add first 或 add last 这套新的 API 改写 Deque 的代码
-Deque<String> deque = new LinkedList<String>();
+# 作业
+
+**1. 用 add first 或 add last 这套新的 API 改写 Deque 的代码**
+```Deque<String> deque = new LinkedList<String>();
 deque.addFirst("a");
 deque.addFirst("b");
 deque.addFirst("c");
@@ -42,13 +44,14 @@ while (deque.size() > 0) {
 System.out.println(deque.removeFirst());
 }
 System.out.println(deque);
+```
 
-2. 分析 Queue 和 Priority Queue 的源码
-1) Queue的源码
+**2. 分析 Queue 和 Priority Queue 的源码**
+1. Queue的源码
 Java7中的Queue是Interface，继承于Collection，声明了add(),offer(),remove(),poll(),element(),peek()6个方法。
 AbstractQueue这个类实现了Queue，add()、remove()、element()三个方法分别是通过调用offer()、poll()、peek()实现的，区别是通过判断语句来添加了异常抛出。
 
-2）Priority Queue 的源码
+2. Priority Queue 的源码
 PriorityQueue是个类，继承于AbstractQueue。
 如果不使用参数，默认初始容量是11。
 包含一个queue和一个comparator（用于排序），以及一个变量size记录queue的长度。
