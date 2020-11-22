@@ -13,12 +13,13 @@
 ## 编码技巧和Code Style
 1. Code Style可以搜 Google Code Style看
 2. 可以去搜索 top tips IDE名称 进行学习
-3. 行头：home，command+left(Mac)
-   行尾：end，command+right(Mac)
-   删除光标右边：fn+delete(Mac)
-   光标按单词划分：control+left/right, option+left/right(Mac)
-   删除单词：control+backspace, option+delete(Mac)
-   选中整行(光标在行头时)：shift+command+right(Mac)
+3. 快捷键
+	- 行头：home，command+left(Mac)
+	- 行尾：end，command+right(Mac)
+	- 删除光标右边：fn+delete(Mac)
+	- 光标按单词划分：control+left/right, option+left/right(Mac)
+	- 删除单词：control+backspace, option+delete(Mac)
+	- 选中整行(光标在行头时)：shift+command+right(Mac)
 
 ## 之前没学过的数据结构
 跳表(Skip List)：在元素有序的情况下，对原链表增加多级索引。时间复杂度O(logN), 空间复杂度O(n)
@@ -49,14 +50,14 @@ System.out.println(deque);
 
 **2. 分析 Queue 和 Priority Queue 的源码**
 1. Queue的源码
-Java7中的Queue是Interface，继承于Collection，声明了add(),offer(),remove(),poll(),element(),peek()6个方法。
-AbstractQueue这个类实现了Queue，add()、remove()、element()三个方法分别是通过调用offer()、poll()、peek()实现的，区别是通过判断语句来添加了异常抛出。
+- Java7中的Queue是Interface，继承于Collection，声明了add(),offer(),remove(),poll(),element(),peek()6个方法。
+- AbstractQueue这个类实现了Queue，add()、remove()、element()三个方法分别是通过调用offer()、poll()、peek()实现的，区别是通过判断语句来添加了异常抛出。
 
 2. Priority Queue 的源码
-PriorityQueue是个类，继承于AbstractQueue。
-如果不使用参数，默认初始容量是11。
-包含一个queue和一个comparator（用于排序），以及一个变量size记录queue的长度。
-每次grow的时候判断，如果旧容量<64，那么新容量翻倍+2，否则新容量增加50%。然后把queue复制到新数组里面。
-每次插入元素时，使用siftUp()方法来维护堆，使得新插入的元素大于等于它的父节点或为根节点。
-每次取出元素时，取出队首元素，队尾置空，并通过siftDown()方法将原队尾元素放入堆中合适位置。
-每次删除元素时，使用siftDown()和siftUp()来维护堆。
+- PriorityQueue是个类，继承于AbstractQueue。
+- 如果不使用参数，默认初始容量是11。
+- 包含一个queue和一个comparator（用于排序），以及一个变量size记录queue的长度。
+- 每次grow的时候判断，如果旧容量<64，那么新容量翻倍+2，否则新容量增加50%。然后把queue复制到新数组里面。
+- 每次插入元素时，使用siftUp()方法来维护堆，使得新插入的元素大于等于它的父节点或为根节点。
+- 每次取出元素时，取出队首元素，队尾置空，并通过siftDown()方法将原队尾元素放入堆中合适位置。
+- 每次删除元素时，使用siftDown()和siftUp()来维护堆。
