@@ -29,7 +29,7 @@
 5. DP：分治+最优子结构
 
 6. DFS
-···
+```
 	visited = set()
 	
 	def dfs(node, visited):
@@ -39,10 +39,10 @@
 		for next_node in node.children():
 			if not next_node in visited:
 				dfs(next node, visited)
-···
+```
 
 7. BFS
-···
+```
 	def BFS(graph, start, end):
 		
 		queue = []
@@ -58,10 +58,10 @@
 			queue.push(nodes)
 		
 		#other processing work
-···
+```
 
 8. 二分查找
-···
+```
 	left, right = 0, len(array)-1
 	while left <= right:
 		mid = (left + right)/2
@@ -72,10 +72,10 @@
 			left = mid+1
 		else:
 			right = mid-1
-···
+```
 
 9. 并查集
-···
+```
 class UnionFind {
 	private int count = 0;
 	private int[] parent;
@@ -104,4 +104,4 @@ class UnionFind {
 		count--;
 	}
 }
-···
+```
